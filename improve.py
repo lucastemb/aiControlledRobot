@@ -15,11 +15,6 @@ while True:
     hands, img = detector.findHands(img) #hands is an array all info for each hand on screen will be stored there 
     
     if hands:
-        #lmList1 = hands[0]["lmList"] #maps out all joints on given hand (i think lm is short for ligament? so maybe it's ligament list)
-        #bbox1 = hands[0]["bbox"] #creates the bounding box for the hand on screen
-        #centerPoint1 = hands[0]["center"] #identifies the center point for the given hand on screen
-        #handType1 = hands[0]["type"] #classifies the hand as being right or left
-        
         fingers = detector.fingersUp(hands[0])
         serialstr = "$"
         for num in fingers: 
